@@ -15,6 +15,7 @@ Encounter.luaならEncounter.Call()で他のファイルから自由にアクセ
 それで私は、expr:matchを利用し、単なる数式ではなく、320+50 やmath.pi*2といった数学的な式をパラメーターとして渡すことを可能にしたコードを作りました。
 
 ────────────────
+```
 local function evalExpression(expr)
     expr = (expr and expr:match("^%s*(.-)%s*$")) or ""
     if expr == "" then return nil end
@@ -34,6 +35,7 @@ local function evalExpression(expr)
     end
     return nil
 end
+```
 ────────────────
 expr = (expr and expr:match("^%s*(.-)%s*$")) or ""
 ここでexprが存在するか確認し、その文字列の前後にある空白文字を全て削除します。
