@@ -3,7 +3,7 @@ Param System for CYF(Create Your Frisk)
 CYFでゲームを作成している皆さん、こんばんは。ADNです。
 このGitでは、例えばAnimations/Sans.luaにあるファイルを、どんなファイルからでも同じ環境にアクセスできるように出来るコードを紹介するGitです。
 
-ただ単にWaves/Wave1.luaでlocal Sans = require("Animations/Sans")をしただけじゃ、Waves/Wave2.luaで同じようにrequireしたとしてもアクセス出来ません。
+ただ単にWaves/Wave1.luaでlocal Sans = require("Animations/Sans")をしただけじゃ、Waves/Wave2.luaで同じようにrequireしたとしても、同じスコープにアクセス出来ません。
 
 そこで目をつけたのが、ゲーム全体を通じてスコープが破棄されないEncounter.luaです。
 
